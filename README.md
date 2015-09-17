@@ -55,9 +55,13 @@ This repository is the requirement of .net Identity. This repository class imple
 #####Custom Repository Classes
 
 **RoleTableRepository:** This repository is to perform more actions on Roles as per our requirement.
+
 **UserClaimsTableRepository:** This repository is to perform actions on UserClaim table as per our requirement.
+
 **UserLoginsTableRepository:** This repository is to perform actions on UserLogins table as per our requirement.
+
 **UserRolesTableRepository:** This repository is to perform actions on UserRoles table as per our requirement.
+
 **UserTableRepository:** This repository is to perform actions on User table as per our requirement.
 
 ####MySQLDatabase
