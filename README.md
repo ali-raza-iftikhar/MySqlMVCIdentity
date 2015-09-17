@@ -23,26 +23,26 @@ This project contains actual implementation of Identity with MySQL database.It c
 ####Models
 This folder contains all the models which are required for Identity.
 
-#####IdentityRole: 
+**IdentityRole:** 
 This Model is inheriting from IRole. Because Microsoft provides IRole interface so that we can customize the role table.
 
-#####IdentityUser:
+**IdentityUser:**
 This Model is inheriting from IUser. Because Microsoft provides IUser interface so that we can customize the user table.
 
-#####UserClaims: 
+**UserClaims:** 
 This Model (Original name is UserClaim) is the part of MVC identity. There was a problem, that .net haven't provide option to customize this(UserClaim) table. So we have create a model name UserClaims. By using fluent api have save this table name UserClaim which was the actual requirement of Identity.
 
-#####UserLoginTable:
+**UserLoginTable:**
 This Model (Original name is UserLogins) is the part of MVC identity. There was same problem, no option to customize this(UserLogins) table. So we have create a model name UserLoginTable. By using fluent api have save this table name UserLogins which was the actual requirement of Identity.
 
-#####UserRolesTable: 
+**UserRolesTable:** 
 This Model (Original name is UserRoles) is the part of MVC identity. There was same problem, no option to customize this(UserRoles) table. So we have create a model name UserRolesTable. By using fluent api have save this table name UserRoles which was the actual requirement of Identity.
 
 ####Repositories
 
 This folder contains all the Repositories that will perform actions on the database.
 
-####.Net Identity Required Repository Classes
+#####.Net Identity Required Repository Classes
 
 **RoleStoreRepository:**
 This repository is the requirement of .net Identity. This repository class implementing the `IQueryableRoleStore<TRole>where TRole : IdentityRole` so that owin context role manager can use this class to perform required action on roles. So in this class all the methods of the interface is implemented. This class is calling the RoleTableRepository to perform CRUD operations.
@@ -50,7 +50,7 @@ This repository is the requirement of .net Identity. This repository class imple
 **UserStoreRepository:**
 This repository is the requirement of .net Identity. This repository class implementing the multiple interface so that owin context user manager can use this class to perform required action on users. So in this class all the methods of the interfaces are implemented.This class is calling the UserTableRepository to perform CRUD operations.
 
-####Custom Repository Classes
+#####Custom Repository Classes
 
 **RoleTableRepository:** This repository is to perform more actions on Roles as per our requirement.
 
