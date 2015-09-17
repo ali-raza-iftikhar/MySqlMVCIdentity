@@ -44,15 +44,13 @@ This folder contains all the Repositories that will perform actions on the datab
 
 ####.Net Identity Required Repository Classes
 
-#####RoleStoreRepository: 
-
+**RoleStoreRepository:**
 This repository is the requirement of .net Identity. This repository class implementing the `IQueryableRoleStore<TRole>where TRole : IdentityRole` so that owin context role manager can use this class to perform required action on roles. So in this class all the methods of the interface is implemented. This class is calling the RoleTableRepository to perform CRUD operations.
 
-#####UserStoreRepository:
-
+**UserStoreRepository:**
 This repository is the requirement of .net Identity. This repository class implementing the multiple interface so that owin context user manager can use this class to perform required action on users. So in this class all the methods of the interfaces are implemented.This class is calling the UserTableRepository to perform CRUD operations.
 
-#####Custom Repository Classes
+####Custom Repository Classes
 
 **RoleTableRepository:** This repository is to perform more actions on Roles as per our requirement.
 
